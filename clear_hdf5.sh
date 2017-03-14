@@ -7,7 +7,7 @@ max_val_acc=0
 max_file=''
 while read line
 do
-	val_acc=$(echo "$line" | awk -F- '{print $5}' | awk -F_ '{print $1}' | sed -e 's/\.//')
+	val_acc=$(echo "$line" | awk -F- '{print $NF}' | awk -F_ '{print $1}' | sed -e 's/\.//')
 	if [ "$val_acc" -gt "$max_val_acc" ]
 	then
 		max_val_acc="$val_acc"
