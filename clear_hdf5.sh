@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ls *.hdf5 -l | awk '{print $9}' >> result.log
-hdf5=$(find . -name "*.hdf5" -mindepth 1 -maxdepth 1)
+hdf5=$(find . -mindepth 1 -maxdepth 1 -name "*.hdf5")
 
 max_val_acc=0
 max_file=''
