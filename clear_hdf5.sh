@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# clear hdf5 files except maximum validation accuracy.
+
 ls *.hdf5 -l | awk '{print $9}' >> result.log
 hdf5=$(find . -mindepth 1 -maxdepth 1 -name "*.hdf5")
 
